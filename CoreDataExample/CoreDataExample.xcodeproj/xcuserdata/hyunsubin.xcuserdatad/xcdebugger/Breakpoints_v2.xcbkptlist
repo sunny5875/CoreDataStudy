@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CC41C0DE-F7F9-491B-8119-ED7E1885EAB5"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97E63B48-81A7-4EE7-9231-DBD1A3AB5615"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataExample/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "97E63B48-81A7-4EE7-9231-DBD1A3AB5615 - 8a46ae08f22ed933"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoreDataExample.ViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "CoreDataExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hyunsubin/CoreDataStudy/CoreDataExample/CoreDataExample/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "97E63B48-81A7-4EE7-9231-DBD1A3AB5615 - 8a46ae08f22ed971"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoreDataExample.ViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "CoreDataExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hyunsubin/CoreDataStudy/CoreDataExample/CoreDataExample/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "97E63B48-81A7-4EE7-9231-DBD1A3AB5615 - 8a46ae08f22ed950"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoreDataExample.ViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "CoreDataExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hyunsubin/CoreDataStudy/CoreDataExample/CoreDataExample/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA5882FF-32F3-4C5B-B108-0E791497A16C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataExample/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC67B2D0-722D-4815-8727-87E91CC22EDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataExample/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "makeUIViewController(context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "409E56FF-C9E2-4F32-95C6-D7AA55F33A44"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreDataExample/MemoRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "getAllItems()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "409E56FF-C9E2-4F32-95C6-D7AA55F33A44 - a70eebdaaf718156"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoreDataExample.MemoRepository.getAllItems() -&gt; Swift.Array&lt;CoreDataExample.MemoEntity&gt;"
+                  moduleName = "CoreDataExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hyunsubin/CoreDataStudy/CoreDataExample/CoreDataExample/MemoRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "409E56FF-C9E2-4F32-95C6-D7AA55F33A44 - b022b83190cd452a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CoreDataExample.Memo) -&gt; CoreDataExample.MemoEntity in CoreDataExample.MemoRepository.getAllItems() -&gt; Swift.Array&lt;CoreDataExample.MemoEntity&gt;"
+                  moduleName = "CoreDataExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hyunsubin/CoreDataStudy/CoreDataExample/CoreDataExample/MemoRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
