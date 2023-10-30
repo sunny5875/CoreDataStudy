@@ -1,5 +1,6 @@
 # CoreDataStudy
 2023, CoreData Practice
+노션 정리 원본: https://exciting-anorak-474.notion.site/CoreData-6d2bcaa51f0d49169790957db08c0c85?pvs=4
 
 ### 개요
 데이터베이스로 주로 Realm와 캐시로 키체인과 UserDefault를 사용했었다.
