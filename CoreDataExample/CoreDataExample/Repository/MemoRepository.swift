@@ -81,4 +81,5 @@ extension MemoRepository: ItemRepositoriable {
         db.context.delete(object)
         db.save()
     }
+    
 }

@@ -12,6 +12,13 @@ struct MemoEntity: SelfReturnable, Identifiable {
     var context: String
     var date: Date
     var title: String
+
+}
+
+extension MemoEntity {
+    static func dummy() -> Self {
+       return MemoEntity(id: Int16(Int.random(in: 0...100)), context: "dummy context", date: Date(), title: "dummy Title")
+    }
 }
 
 //

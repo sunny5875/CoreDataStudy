@@ -11,6 +11,9 @@ import Combine
 
 class ContentViewModel: ObservableObject {
     
+    @Published var newItem: MemoEntity = MemoEntity.dummy()
+    @Published var memoList: [MemoEntity] = []
+    
     private let repository: ItemRepositoriable
     private let session: URLSessionable
     private var store = Set<AnyCancellable>()
@@ -19,6 +22,7 @@ class ContentViewModel: ObservableObject {
          session: URLSessionable = URLSession.shared) {
         self.repository = repository
         self.session = session
+        self.memoList = getAllMemos()
     }
     
     func onAppear_add() {
@@ -53,7 +57,7 @@ class ContentViewModel: ObservableObject {
     }
     
     func onAppear_fetchAPI_async(username: String) async throws -> Memo? {
-        guard var old = repository.getAllItems().first else {return nil}
+        guard repository.getAllItems().first != nil else {return nil}
         
         let new = try await EndPoint
             .init("https://api.github.com")
@@ -62,15 +66,31 @@ class ContentViewModel: ObservableObject {
             .requestPublisher(expect: UserResponse.self)
             .asyncThrows
         // 일부로 entity가 아닌 직접 객체를 이용해서 접근함 문제 안생김!!
-        var newMemo = Memo(context: CoreDataDB.shared.context)
+        let newMemo = Memo(context: CoreDataDB.shared.context)
         newMemo.id = 44
         newMemo.title = new.login
         return newMemo
     }
     
-    func getAllMemos() -> [MemoEntity] {
-        repository.getAllItems()
+    
+    func setNewItem() {
+        
     }
+    func getAllMemos() -> [MemoEntity] {
+       memoList = repository.getAllItems()
+        return memoList
+    }
+    
+    func deleteItem(item: MemoEntity) {
+        repository.delete(item)
+        memoList.removeAll(where: {$0.id == item.id })
+    }
+    
+    func addItem() {
+        repository.create(newItem)
+        memoList.append(newItem)
+    }
+    
 }
 
 
