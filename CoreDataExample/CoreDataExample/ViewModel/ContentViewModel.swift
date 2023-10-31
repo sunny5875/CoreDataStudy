@@ -6,22 +6,22 @@
 //
 
 import Foundation
-import MightyCombine
 import Combine
 
 class ContentViewModel: ObservableObject {
     
     @Published var newItem: MemoEntity = MemoEntity.dummy()
     @Published var memoList: [MemoEntity] = []
+    @Published var newUser: UserEntity = UserEntity.dummy()
     
-    private let repository: ItemRepositoriable
-    private let session: URLSessionable
+    private let repository: MemoRepository
+    private let userRepository: UserRepository
     private var store = Set<AnyCancellable>()
     
-    init(repository: ItemRepositoriable = MemoRepository(),
-         session: URLSessionable = URLSession.shared) {
+    init(repository: MemoRepository = MemoRepository(),
+         userRepository: UserRepository = UserRepository()) {
         self.repository = repository
-        self.session = session
+        self.userRepository = userRepository
         self.memoList = getAllMemos()
     }
     
@@ -43,36 +43,6 @@ class ContentViewModel: ObservableObject {
     }
     
     
-    func onAppear_fetchAPI(username: String) {
-        EndPoint
-            .init("https://api.github.com")
-            .urlPaths(["/users", "/\(username)"])
-            .urlSession(self.session)
-            .requestPublisher(expect: UserResponse.self)
-            .sink(receiveCompletion: { _  in}, receiveValue: { item in
-                let new = MemoEntity(id: 5, context: "\(item.id)", date: Date(), title: item.login)
-                print(new)
-                self.repository.create(new)
-            }).store(in: &store)
-    }
-    
-    func onAppear_fetchAPI_async(username: String) async throws -> Memo? {
-        guard repository.getAllItems().first != nil else {return nil}
-        
-        let new = try await EndPoint
-            .init("https://api.github.com")
-            .urlPaths(["/users", "/\(username)"])
-            .urlSession(self.session)
-            .requestPublisher(expect: UserResponse.self)
-            .asyncThrows
-        // 일부로 entity가 아닌 직접 객체를 이용해서 접근함 문제 안생김!!
-        let newMemo = Memo(context: CoreDataDB.shared.context)
-        newMemo.id = 44
-        newMemo.title = new.login
-        return newMemo
-    }
-    
-    
     func setNewItem() {
         
     }
@@ -86,10 +56,43 @@ class ContentViewModel: ObservableObject {
         memoList.removeAll(where: {$0.id == item.id })
     }
     
+    func deleteMemo(indexSet: IndexSet) {
+        guard let item = indexSet.compactMap({ memoList[$0] }).first else {return}
+        repository.delete(item)
+        memoList.removeAll(where: {$0.id == item.id })
+    }
+    
     func addItem() {
         repository.create(newItem)
         memoList.append(newItem)
     }
+    
+    func addUser() {
+        userRepository.create(newUser)
+    }
+    
+    func onAppear_createMemo_300() {
+        userRepository.create(UserEntity(name: "수빈", nickname: "써니", isGirl: true))
+        userRepository.create(UserEntity(name: "상우", nickname: "댕우"))
+        userRepository.create(UserEntity(name: "인섭", nickname: "우디"))
+        let users = userRepository.getAllItems()
+        
+        for i in 0...300 {
+            var memo = MemoEntity(id: Int16(i), context: "\(i)st context", date: Date(), title: "\(i)st title")
+            switch i % 3 {
+            case 0: memo.owner = users[0]
+            case 1: memo.owner = users[1]
+            case 2: memo.owner = users[2]
+            default:
+                memo.owner = UserEntity.dummy()
+            }
+            repository.create(memo)
+            
+        }
+        
+        print(repository.getAllItems())
+    }
+    
     
 }
 

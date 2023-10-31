@@ -12,17 +12,20 @@
 		D61204BF2AEA1EE90001A2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61204BE2AEA1EE90001A2A3 /* Assets.xcassets */; };
 		D61204C22AEA1EE90001A2A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61204C12AEA1EE90001A2A3 /* Preview Assets.xcassets */; };
 		D61204D22AEA20280001A2A3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D61204D02AEA20280001A2A3 /* Model.xcdatamodeld */; };
-		D61204D52AEA208B0001A2A3 /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204D32AEA208B0001A2A3 /* Memo+CoreDataClass.swift */; };
-		D61204D62AEA208B0001A2A3 /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204D42AEA208B0001A2A3 /* Memo+CoreDataProperties.swift */; };
 		D61204D82AEA20C70001A2A3 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204D72AEA20C70001A2A3 /* ContentViewModel.swift */; };
 		D61204DA2AEA20D50001A2A3 /* CoreDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204D92AEA20D50001A2A3 /* CoreDataDB.swift */; };
-		D61204DC2AEA20E20001A2A3 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204DB2AEA20E20001A2A3 /* Entity.swift */; };
+		D61204DC2AEA20E20001A2A3 /* MemoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204DB2AEA20E20001A2A3 /* MemoEntity.swift */; };
 		D61204DE2AEA20F60001A2A3 /* MemoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204DD2AEA20F60001A2A3 /* MemoRepository.swift */; };
 		D61204E02AEA21120001A2A3 /* SelfReturnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61204DF2AEA21120001A2A3 /* SelfReturnable.swift */; };
-		D61204E92AEA35B40001A2A3 /* Model.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D61204E82AEA35B40001A2A3 /* Model.xcmappingmodel */; };
-		D61204EC2AEA3BA20001A2A3 /* MightyCombine in Frameworks */ = {isa = PBXBuildFile; productRef = D61204EB2AEA3BA20001A2A3 /* MightyCombine */; };
-		D61204EE2AEA3BA20001A2A3 /* MightySwift in Frameworks */ = {isa = PBXBuildFile; productRef = D61204ED2AEA3BA20001A2A3 /* MightySwift */; };
+		D67737492AF09BB800515CF1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67737452AF09BB800515CF1 /* User+CoreDataClass.swift */; };
+		D677374A2AF09BB800515CF1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67737462AF09BB800515CF1 /* User+CoreDataProperties.swift */; };
+		D677374B2AF09BB800515CF1 /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67737472AF09BB800515CF1 /* Memo+CoreDataClass.swift */; };
+		D677374C2AF09BB800515CF1 /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67737482AF09BB800515CF1 /* Memo+CoreDataProperties.swift */; };
+		D67737592AF0B3E400515CF1 /* Model.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D67737582AF0B3E400515CF1 /* Model.xcmappingmodel */; };
 		D6BF650D2AEF4CB10042A3E9 /* AddMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF650C2AEF4CB10042A3E9 /* AddMemoView.swift */; };
+		D6BFD22F2AF08F3D0042A3E9 /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFD22E2AF08F3D0042A3E9 /* AddUserView.swift */; };
+		D6BFD2312AF08F690042A3E9 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFD2302AF08F690042A3E9 /* UserEntity.swift */; };
+		D6BFD23B2AF091B50042A3E9 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFD23A2AF091B50042A3E9 /* UserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,16 +35,25 @@
 		D61204BE2AEA1EE90001A2A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D61204C12AEA1EE90001A2A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D61204D12AEA20280001A2A3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		D61204D32AEA208B0001A2A3 /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D61204D42AEA208B0001A2A3 /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D61204D72AEA20C70001A2A3 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		D61204D92AEA20D50001A2A3 /* CoreDataDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDB.swift; sourceTree = "<group>"; };
-		D61204DB2AEA20E20001A2A3 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		D61204DB2AEA20E20001A2A3 /* MemoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEntity.swift; sourceTree = "<group>"; };
 		D61204DD2AEA20F60001A2A3 /* MemoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRepository.swift; sourceTree = "<group>"; };
 		D61204DF2AEA21120001A2A3 /* SelfReturnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfReturnable.swift; sourceTree = "<group>"; };
 		D61204E72AEA35650001A2A3 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
-		D61204E82AEA35B40001A2A3 /* Model.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model.xcmappingmodel; sourceTree = "<group>"; };
+		D67737452AF09BB800515CF1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D67737462AF09BB800515CF1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D67737472AF09BB800515CF1 /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D67737482AF09BB800515CF1 /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D677374D2AF0AFC800515CF1 /* Model 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 4.xcdatamodel"; sourceTree = "<group>"; };
+		D67737522AF0B12000515CF1 /* Model 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 5.xcdatamodel"; sourceTree = "<group>"; };
+		D67737572AF0B33400515CF1 /* Model 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 6.xcdatamodel"; sourceTree = "<group>"; };
+		D67737582AF0B3E400515CF1 /* Model.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model.xcmappingmodel; sourceTree = "<group>"; };
 		D6BF650C2AEF4CB10042A3E9 /* AddMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoView.swift; sourceTree = "<group>"; };
+		D6BFD22D2AF08D870042A3E9 /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
+		D6BFD22E2AF08F3D0042A3E9 /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
+		D6BFD2302AF08F690042A3E9 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		D6BFD23A2AF091B50042A3E9 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D61204EE2AEA3BA20001A2A3 /* MightySwift in Frameworks */,
-				D61204EC2AEA3BA20001A2A3 /* MightyCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +94,11 @@
 				D61204BA2AEA1EE80001A2A3 /* CoreDataExampleApp.swift */,
 				D61204BC2AEA1EE80001A2A3 /* MemoView.swift */,
 				D6BF650C2AEF4CB10042A3E9 /* AddMemoView.swift */,
+				D6BFD22E2AF08F3D0042A3E9 /* AddUserView.swift */,
 				D61204BE2AEA1EE90001A2A3 /* Assets.xcassets */,
 				D61204C02AEA1EE90001A2A3 /* Preview Content */,
 				D61204D02AEA20280001A2A3 /* Model.xcdatamodeld */,
-				D61204E82AEA35B40001A2A3 /* Model.xcmappingmodel */,
+				D67737582AF0B3E400515CF1 /* Model.xcmappingmodel */,
 			);
 			path = CoreDataExample;
 			sourceTree = "<group>";
@@ -103,8 +114,10 @@
 		D61204CF2AEA1F3B0001A2A3 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				D61204D32AEA208B0001A2A3 /* Memo+CoreDataClass.swift */,
-				D61204D42AEA208B0001A2A3 /* Memo+CoreDataProperties.swift */,
+				D67737452AF09BB800515CF1 /* User+CoreDataClass.swift */,
+				D67737462AF09BB800515CF1 /* User+CoreDataProperties.swift */,
+				D67737472AF09BB800515CF1 /* Memo+CoreDataClass.swift */,
+				D67737482AF09BB800515CF1 /* Memo+CoreDataProperties.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -113,7 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				D61204DD2AEA20F60001A2A3 /* MemoRepository.swift */,
-				D61204DB2AEA20E20001A2A3 /* Entity.swift */,
+				D61204DB2AEA20E20001A2A3 /* MemoEntity.swift */,
+				D6BFD23A2AF091B50042A3E9 /* UserRepository.swift */,
+				D6BFD2302AF08F690042A3E9 /* UserEntity.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -151,8 +166,6 @@
 			);
 			name = CoreDataExample;
 			packageProductDependencies = (
-				D61204EB2AEA3BA20001A2A3 /* MightyCombine */,
-				D61204ED2AEA3BA20001A2A3 /* MightySwift */,
 			);
 			productName = CoreDataExample;
 			productReference = D61204B72AEA1EE80001A2A3 /* CoreDataExample.app */;
@@ -183,7 +196,6 @@
 			);
 			mainGroup = D61204AE2AEA1EE80001A2A3;
 			packageReferences = (
-				D61204EA2AEA3BA20001A2A3 /* XCRemoteSwiftPackageReference "MightyCombine" */,
 			);
 			productRefGroup = D61204B82AEA1EE80001A2A3 /* Products */;
 			projectDirPath = "";
@@ -213,14 +225,19 @@
 			files = (
 				D61204BD2AEA1EE80001A2A3 /* MemoView.swift in Sources */,
 				D61204DE2AEA20F60001A2A3 /* MemoRepository.swift in Sources */,
-				D61204D52AEA208B0001A2A3 /* Memo+CoreDataClass.swift in Sources */,
+				D6BFD22F2AF08F3D0042A3E9 /* AddUserView.swift in Sources */,
 				D61204E02AEA21120001A2A3 /* SelfReturnable.swift in Sources */,
+				D6BFD23B2AF091B50042A3E9 /* UserRepository.swift in Sources */,
+				D677374B2AF09BB800515CF1 /* Memo+CoreDataClass.swift in Sources */,
+				D677374C2AF09BB800515CF1 /* Memo+CoreDataProperties.swift in Sources */,
+				D67737592AF0B3E400515CF1 /* Model.xcmappingmodel in Sources */,
+				D67737492AF09BB800515CF1 /* User+CoreDataClass.swift in Sources */,
 				D61204DA2AEA20D50001A2A3 /* CoreDataDB.swift in Sources */,
+				D677374A2AF09BB800515CF1 /* User+CoreDataProperties.swift in Sources */,
 				D61204D82AEA20C70001A2A3 /* ContentViewModel.swift in Sources */,
-				D61204DC2AEA20E20001A2A3 /* Entity.swift in Sources */,
+				D61204DC2AEA20E20001A2A3 /* MemoEntity.swift in Sources */,
 				D61204BB2AEA1EE80001A2A3 /* CoreDataExampleApp.swift in Sources */,
-				D61204E92AEA35B40001A2A3 /* Model.xcmappingmodel in Sources */,
-				D61204D62AEA208B0001A2A3 /* Memo+CoreDataProperties.swift in Sources */,
+				D6BFD2312AF08F690042A3E9 /* UserEntity.swift in Sources */,
 				D6BF650D2AEF4CB10042A3E9 /* AddMemoView.swift in Sources */,
 				D61204D22AEA20280001A2A3 /* Model.xcdatamodeld in Sources */,
 			);
@@ -429,38 +446,18 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		D61204EA2AEA3BA20001A2A3 /* XCRemoteSwiftPackageReference "MightyCombine" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MightyCombine/MightyCombine";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D61204EB2AEA3BA20001A2A3 /* MightyCombine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D61204EA2AEA3BA20001A2A3 /* XCRemoteSwiftPackageReference "MightyCombine" */;
-			productName = MightyCombine;
-		};
-		D61204ED2AEA3BA20001A2A3 /* MightySwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D61204EA2AEA3BA20001A2A3 /* XCRemoteSwiftPackageReference "MightyCombine" */;
-			productName = MightySwift;
-		};
-/* End XCSwiftPackageProductDependency section */
-
 /* Begin XCVersionGroup section */
 		D61204D02AEA20280001A2A3 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D67737572AF0B33400515CF1 /* Model 6.xcdatamodel */,
+				D67737522AF0B12000515CF1 /* Model 5.xcdatamodel */,
+				D677374D2AF0AFC800515CF1 /* Model 4.xcdatamodel */,
+				D6BFD22D2AF08D870042A3E9 /* Model 3.xcdatamodel */,
 				D61204E72AEA35650001A2A3 /* Model 2.xcdatamodel */,
 				D61204D12AEA20280001A2A3 /* Model.xcdatamodel */,
 			);
-			currentVersion = D61204E72AEA35650001A2A3 /* Model 2.xcdatamodel */;
+			currentVersion = D67737572AF0B33400515CF1 /* Model 6.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

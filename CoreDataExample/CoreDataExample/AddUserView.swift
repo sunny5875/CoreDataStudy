@@ -1,50 +1,47 @@
 //
-//  MemoView.swift
+//  AddUserView.swift
 //  CoreDataExample
 //
-//  Created by 현수빈 on 10/30/23.
+//  Created by 현수빈 on 10/31/23.
 //
 
 import SwiftUI
 
-struct AddMemoView: View {
+struct AddUserView: View {
     
     @StateObject var viewModel: ContentViewModel
     @Binding var showModal: Bool
     
+    @State private var multiSelection = Set<MemoEntity>()
+    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 TextField(
-                        "Title",
-                        text: $viewModel.newItem.title
+                        "UserName",
+                        text: $viewModel.newUser.name
                     )
                 
                 TextField(
-                        "Context",
-                        text: $viewModel.newItem.context
+                        "UserName",
+                        text: $viewModel.newUser.nickname
                     )
                 
                 
                 Button("Save") {
                     viewModel.addItem()
                     viewModel.newItem = MemoEntity.dummy()
+                    viewModel.addUser()
+                    viewModel.newUser = UserEntity.dummy()
                     showModal.toggle()
                 }
                 Button("Cancel") {
                     showModal.toggle()
                 }
             }
+            
         }
-        .navigationBarTitle(Text("Add Memo"))
-        .toolbar {
-            ToolbarItem {
-                Button("Cancel") {
-                    showModal.toggle()
-                }
-                
-            }
-        }
+        .navigationBarTitle(Text("Add User"))
     }
 }
 #Preview {

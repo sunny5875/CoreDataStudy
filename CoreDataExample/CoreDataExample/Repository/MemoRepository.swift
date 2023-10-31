@@ -11,15 +11,16 @@ import CoreData
 
 protocol ItemRepositoriable {
     
-    func create(_ item: MemoEntity)
-    func edit(_ item: MemoEntity)
-    func getItem<T: Equatable>(_ keyPath: WritableKeyPath<MemoEntity, T>, _ value: T) -> MemoEntity?
-    func getAllItems() -> [MemoEntity]
-    func delete(_ item: MemoEntity)
+    associatedtype Entity
+    
+    func create(_ item: Entity)
+    func edit(_ item: Entity)
+    func getItem<T: Equatable>(_ keyPath: WritableKeyPath<Entity, T>, _ value: T) -> Entity?
+    func getAllItems() -> [Entity]
+    func delete(_ item: Entity)
 }
 
 final class MemoRepository {
-    
     private let db = CoreDataDB.shared
     
     private func getAll() -> [Memo] {
@@ -34,6 +35,7 @@ final class MemoRepository {
 }
 
 extension MemoRepository: ItemRepositoriable {
+    typealias Entity = MemoEntity
     
     func create(_ item: MemoEntity) {
         let new = Memo(context: db.context) // context를 가져와서 NSManagedObject를 만든다
@@ -41,6 +43,13 @@ extension MemoRepository: ItemRepositoriable {
         new.context = item.context
         new.title = item.title
         new.id = item.id
+        if let owner = item.owner {
+            let request: NSFetchRequest<User> = User.fetchRequest()
+            request.predicate = NSPredicate(format: "name == %@", owner.name)
+            let object = try? db.context.fetch(request).first
+            new.owner = object
+        }
+       
         db.context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump // upsert를 지원하기 위함
         db.save() // NSManagedObjectContext를 저장
     }
@@ -59,6 +68,12 @@ extension MemoRepository: ItemRepositoriable {
         object?.context = item.context
         object?.date = item.date
         object?.id = item.id
+        if let owner = item.owner {
+            let request: NSFetchRequest<User> = User.fetchRequest()
+            request.predicate = NSPredicate(format: "name == %@", owner.name)
+            let user = try? db.context.fetch(request).first
+            object?.owner = user
+        }
         db.save()
     }
     

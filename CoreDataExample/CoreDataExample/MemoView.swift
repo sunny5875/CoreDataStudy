@@ -11,25 +11,22 @@ struct MemoView: View {
     
     @StateObject var viewModel: ContentViewModel
     @State var showModal: Bool
+    @State var showUserModal: Bool
     
     var body: some View {
-        
           NavigationStack {
-              List(viewModel.memoList) { item in
-                HStack {
-                    Text(item.title)
-                        .bold()
-                    Text("id: \(item.id)")
-                        .fontWeight(.thin)
-                    Spacer()
-                    Button {
-                        viewModel.deleteItem(item: item)
-                    } label: {
-                        Image(systemName: "trash")
-                            .foregroundColor(.red)
-                    }
-                }
-            }
+              List {
+                  ForEach(viewModel.memoList) { item in
+                      HStack {
+                          Text(item.title)
+                              .bold()
+                          Text("id: \(item.id)")
+                              .fontWeight(.thin)
+                      }
+                  }.onDelete(perform: { indexSet in
+                      viewModel.deleteMemo(indexSet: indexSet)
+                  })
+              }
             .navigationTitle("Past Memo")
             .toolbar {
                 ToolbarItem {
@@ -40,10 +37,26 @@ struct MemoView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        showUserModal = true
+                    } label: {
+                        Image(systemName: "person.crop.circle.badge.plus")
+                    }
+                }
+            }
+            .toolbar {
+                EditButton()
+            }
             .sheet(isPresented: $showModal, content: {
                 AddMemoView(viewModel: viewModel, showModal: $showModal)
             })
+            .sheet(isPresented: $showUserModal, content: {
+                AddUserView(viewModel: viewModel, showModal: $showUserModal)
+            })
         }
+//          .onAppear {viewModel.onAppear_createMemo_100()}
 //        .onAppear {viewModel.onAppear_add()} // CRUD 테스트
 //        .onAppear { viewModel.onAppear_fetchAPI(username: "sunny5875") } // api 테스트
 //        .onAppear { // task안에 써보기
@@ -56,5 +69,5 @@ struct MemoView: View {
 }
 
 #Preview {
-    MemoView(viewModel: ContentViewModel(), showModal: false)
+    MemoView(viewModel: ContentViewModel(), showModal: false, showUserModal: false)
 }
